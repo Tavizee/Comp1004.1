@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PassGuard - Your Password Manager</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <script src="js/login-page.js"></script>
+</head>
+<body>
+
+    <!-- Login Section -->
+    <div class="container" id="loginSection">
+        <h2>Login</h2>
+        <form id="loginForm" onsubmit="login(event)">
+            <input type="text" id="username" placeholder="Username" required><br>
+            <input type="password" id="password" placeholder="Password" required><br>
+            <input type="submit" value="Login">
+        </form>
+        <button class="signup-btn" onclick="window.location.href='signup.html'">Sign Up</button>
+    </div>
+
+    <!-- Signup Section -->
+    <div class="container" id="signupSection" style="display: none;">
+        <h2>Sign Up</h2>
+        <form id="signupForm" onsubmit="signup(event)">
+            <input type="text" id="username" name="username" placeholder="Username" value="admin" required><br>
+            <input type="email" id="email" name="email" placeholder="Email Address" value="kariahuuat@mail.com" required><br>
+            <input type="password" id="password" name="password" placeholder="Password" required><br>
+            <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password" required><br>
+            <input type="submit" value="Sign Up">
+        </form>
+    </div>
+
+    <!-- Password Manager Section -->
+    <div class="container" id="passwordManagerSection" style="display: none;">
+        <h2>Password Manager</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Password Name</th>
+                    <th>Website URL</th>
+                    <th>Password</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Example</td>
+                    <td>http://example.com</td>
+                    <td>********</td>
+                    <td>
+                        <button class="btn btn-success">View</button>
+                        <button class="btn btn-warning">Edit</button>
+                        <button class="btn btn-danger">Delete</button>
+                    </td>
+                </tr>
+                <!-- Add more rows as needed -->
+            </tbody>
+        </table>
+    </div>
+
+
+
+</body>
+</html>
